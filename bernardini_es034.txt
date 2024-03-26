@@ -1,0 +1,59 @@
+import argparse
+import matplotlib.pyplot as p
+
+def creaGrafico(tipo, n):
+    # creo i valori per la coordinata X 
+    x = [0,1,2,3,4,5,6,7,8,9,10]
+    # lineare
+    y = []
+    nome = ""
+    # lineare
+    if tipo == "L":
+        for i in x:
+            # aggiungo per ogni valore di x (i) la sua Y lineare
+            y.append(n * i)
+        nome = "Lineare.png"
+    elif tipo == "P":
+        for i in x:
+            # aggiungo per ogni valore di x (i) la sua Y polinomiale
+            y.append(i ** n)
+        nome = "Polinomiale.png"
+    elif tipo == "E":
+        for i in x:
+            # aggiungo per ogni valore di x (i) la sua Y polinomiale
+            y.append(n ** i)            
+        nome = "Esponenziale.png"
+    # funzione per creare il grafico e salvare il file
+    p.plot(x,y)
+    p.xlabel("X")
+    p.ylabel("Y")
+    p.title(nome)
+    p.savefig(nome, dpi=300)
+    p.show()
+
+def main ():
+    # inizializzo il parser
+    parse = argparse.ArgumentParser()
+    # aggiungo gli argomenti
+    parse.add_argument('n', type=float)
+    parse.add_argument('--linear', action="store_true", required=False)
+    parse.add_argument('--polinomial', action="store_true", required=False)
+    parse.add_argument('--exponential', action="store_true", required=False)
+
+    args = parse.parse_args()
+    count = 0
+    if args.linear:
+        creaGrafico("L", args.n)
+        count += 1
+    if args.polinomial:
+        creaGrafico("P", args.n)
+        count += 1
+    if args.exponential:
+        creaGrafico("E", args.n)
+        count += 1
+    if count == 0:
+        print("ERRORE!")
+        exit(1)
+
+if __name__ == "__main__":
+    main()
