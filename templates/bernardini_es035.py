@@ -9,3 +9,4 @@ def home():
 @app.route("/cities")
 def cities():
     return render_template("list.html")
+@app.route()
