@@ -4,4 +4,4 @@ import json
 app = Flask(__name__)
 @app.route("/")
 def home():
-    return "Welcome to our Weather Application!"
+    return "<p>Welcome to our Weather Application!</p>"
