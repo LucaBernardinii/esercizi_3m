@@ -8,7 +8,7 @@ def index():
         data = json.load(f)
     return render_template("bernardini_es037_route.html", links=data)
 
-
+index()
 
 if __name__ == "__main__":
     app.run(debug=True, port=1432)
