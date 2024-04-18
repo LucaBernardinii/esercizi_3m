@@ -4,11 +4,10 @@ import json
 app = Flask(__name__)
 
 def index():
-    with open("bernardini_es037.json") as f:
+    with open("bernardini_es037_list.json") as f:
         data = json.load(f)
     return render_template("bernardini_es037_route.html", links=data)
 
-index()
 
 
 if __name__ == "__main__":
