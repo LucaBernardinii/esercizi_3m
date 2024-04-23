@@ -9,8 +9,6 @@ def index():
 @app.route("/success", methods=["POST"])
 def success():
     username = request.form["Username"]
-    email = request.form["Email"]
-    password = request.form["Password"]
     return render_template("bernardini_es038_success.html", uname = username)
 
 if __name__ == "__main__":
