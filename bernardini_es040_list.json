@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Spaghetti Carbonara",
+        "ingredients": ["Spaghetti", "Eggs", "Pancetta", "Parmesan Cheese"],
+        "instructions": "Boil the spaghetti. Fry the pancetta. Mix eggs and cheese. Combine everything."
+    },
+    {
+        "id": 2,
+        "name": "Spaghetti aglio olio e peperoncino",
+        "ingredients": ["Spaghetti", "Garlic", "EVO Oil", "Hot Pepper"],
+        "instructions": "Brown the garlic with the oil in a pan. Put the spaghetti in boiling water. Put the spaghetti in the garlic pan and put some hot pepper."
+    },
+    {
+        "id": 3,
+        "name": "Recipe 3",
+        "ingredients": ["3.1", "3.2", "3.3"],
+        "instructions": "Instructions 3"
+    }
+]
